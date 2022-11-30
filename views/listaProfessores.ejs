@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>NOME</th>
+        <th>EMAIL</th>
+        <th>DEPARTAMENTO</th>
+    </tr>
+    <% dados.forEach(function (professor){ %>
+    <tr>
+        <td><%- professor.nome %></td>
+        <td><%- professor.email %></td>
+        <td><%- professor.departamento %></td>
+        <td><a href="/busca-professor?id=<%= professor._id %>">EDITAR</a></td>
+        <td><a href="/apagar-professor-bd?id=<%= professor._id %>">APAGAR</a></td>
+    </tr>
+   <% }) %>
+</table>
+</body>
+</html>
