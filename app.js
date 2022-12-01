@@ -20,7 +20,7 @@ resposta.render("chat",{mensagem:mensagem});
 servidor.post("/processa",function(pedido,resposta){
     let texto = pedido.body.texto;
     mensagem.push(texto);
-    resposta.redirect("/t");
+    resposta.redirect("/");
 
     })
     
